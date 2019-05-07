@@ -44,13 +44,6 @@ typedef struct HMAC_SHA256Context {
 	SHA256_CTX octx;
 } HMAC_SHA256_CTX;
 
-void	SHA256_Init(SHA256_CTX *);
-void	SHA256_Update(SHA256_CTX *, const void *, size_t);
-void	SHA256_Final(unsigned char [32], SHA256_CTX *);
-void	HMAC_SHA256_Init(HMAC_SHA256_CTX *, const void *, size_t);
-void	HMAC_SHA256_Update(HMAC_SHA256_CTX *, const void *, size_t);
-void	HMAC_SHA256_Final(unsigned char [32], HMAC_SHA256_CTX *);
-
 /**
  * PBKDF2_SHA256(passwd, passwdlen, salt, saltlen, c, buf, dkLen):
  * Compute PBKDF2(passwd, salt, c, dkLen) using HMAC-SHA256 as the PRF, and
